@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, Output, booleanAttribute, numberAttribute } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostBinding,
+  Input,
+  Output,
+  booleanAttribute,
+  numberAttribute,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,6 +27,9 @@ export class TodoComponent {
   hasFinished!:boolean;
   @Output()
   readonly hasFinishedChange = new EventEmitter();
+
+  @HostBinding('class')
+  class = 'app-todo';
 
   onSetStatus(hasFinished: boolean): void {
     this.hasFinishedChange.emit(hasFinished);
