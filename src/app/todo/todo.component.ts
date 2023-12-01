@@ -19,6 +19,10 @@ import { Todo } from '../model/todo';
 export class TodoComponent {
   @Input({ required: true })
   task!: Todo;
+
+  @Output()
+  remove = new EventEmitter<void>();
+
   @Output()
   readonly stateChange = new EventEmitter<boolean>();
 
