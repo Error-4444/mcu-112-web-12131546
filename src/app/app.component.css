@@ -1,9 +1,13 @@
 div.container {
-    margin: 0px auto;
-    width: 550px;
-  }
-  
-  .main {
-    border: solid 1px #ddd;
-    border-bottom: none;
-  }
+  margin: 0px auto;
+  width: 550px;
+}
+
+.main {
+  border: solid 1px #ddd;
+  border-bottom: none;
+}
+
+.todo-detail {
+  margin-top: 50px;
+}
