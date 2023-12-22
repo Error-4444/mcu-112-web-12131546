@@ -15,6 +15,7 @@ import { TaskService } from './services/task.service';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoSearchComponent } from './todo-search/todo-search.component';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ import { TodoSearchComponent } from './todo-search/todo-search.component';
     TodoDetailComponent,
     FooterComponent,
     TodoSearchComponent,
+    TodoFormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
