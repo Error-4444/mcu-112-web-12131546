@@ -1,21 +1,22 @@
-import { JsonPipe } from '@angular/common';
-import { Component, HostBinding } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ITodoForm } from '../interface/todo-form.interface';
+import { TodoFormComponent } from './todo-form.component';
 
-@Component({
-  selector: 'app-todo-form',
-  standalone: true,
-  imports: [ReactiveFormsModule, JsonPipe],
-  templateUrl: './todo-form.component.html',
-  styleUrl: './todo-form.component.css',
-})
-export class TodoFormComponent {
-  @HostBinding('class')
-  class = 'todo-form';
+describe('TodoFormComponent', () => {
+  let component: TodoFormComponent;
+  let fixture: ComponentFixture<TodoFormComponent>;
 
-  readonly form = new FormGroup<ITodoForm>({
-    content: new FormControl<string | null>(null),
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [TodoFormComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(TodoFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
-}
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
