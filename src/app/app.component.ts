@@ -16,6 +16,7 @@ import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoSearchComponent } from './todo-search/todo-search.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
     FooterComponent,
     TodoSearchComponent,
     TodoFormComponent,
+    NavBarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
